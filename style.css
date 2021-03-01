@@ -1,0 +1,92 @@
+
+:root{
+  --dark: #212529;
+
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    font-family: Open Sans, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    color: #525f7f;
+    background-color: #f8f9fe;
+width: 100%;
+}
+
+nav{
+height: 100vh;
+
+}
+
+.navbar{
+position: fixed;
+width: 100%;
+top:0;
+}
+
+.tumblr-input{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.tumblr-input input{
+width:27rem;
+border: none;
+height: 2rem !important;
+}
+
+
+.login-signup-btn  button{
+width: 6rem;
+color:var(--dark);
+font-size: 1rem;
+font-weight: 700;
+line-height: 1.5;
+padding: 6px 15px;
+
+}
+nav ul{
+list-style: none;
+margin:auto 0;
+color:red;
+width: 2rem;
+margin-left: 4rem;
+margin-top: 12rem;
+position: fixed;
+}
+
+
+
+nav .nav-list{
+width: 1rem;
+height: 1rem;
+border-radius: 50%;
+margin-top: 10px;
+border: 2px solid black;
+cursor: pointer;
+}
+
+nav .nav-listactive{
+background: #000;
+}
+
+
+.first-section{
+background-color:thistle;
+text-align: center;
+padding-top: 5rem;
+height: 100vh;
+}
+

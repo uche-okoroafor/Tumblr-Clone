@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Tumbir</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="navbar">
+            <div class="tumblr-input">
+                <i class="fab fa-tumblr fa-2x "></i>
+                <input type="text" placeholder="Search Tumblr" class="rounded ml-3 h-75 ">
+
+            </div>
+
+            <div class="login-signup-btn">
+
+                <button class="btn btn-success ">Log in</button><button class="btn btn-info ml-3">Sign up</button>
+
+            </div>
+        </div>
+        <ul class="nav-list-containner list-group" id="nav-list">
+            <li v-for="list in activeSectionList" class="nav-list" @click='activeSection'
+                ></li>
+
+
+
+
+            <!-- @click='activeSection' :class={'nav-listactive:isActive'} class="nav-list"></li> -->
+            <!-- <li @click='activeSection' :class={'nav-listactive:isActive'} class="nav-list"></li>
+<li @click='activeSection' :class={'nav-listactive:isActive'} class="nav-list"></li>
+<li @click='activeSection' :class={'nav-listactive:isActive'} class="nav-list"></li>
+<li @click='activeSection' :class={'nav-listactive:isActive'} class="nav-list"></li>
+<li @click='activeSection' :class={'nav-listactive:isActive'} class="nav-list"></li> -->
+        </ul>
+
+        <section class="first-section">
+            <h1>tumblr</h1>
+            <p>Make stuff, look at stuff,talk</br> about stuff, find your people.</p>
+            <button class="btn-info">Get Started</button></br>
+            <button class="btn-success">Log in</button>
+
+            <p> <i class="fa fa-location-arrow" aria-hidden="true"></i> Here is what is Trending</p>
+        </section>
+
+
+
+
+    </nav>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+<script src="script.js"></script>
+
+</html>
