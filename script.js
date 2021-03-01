@@ -2,7 +2,7 @@ const nav = Vue.createApp({
 data() {
     return {
   isActive:false,      
-activeSectionList:[{activeSection:true},{activeSection:false},{activeSection:false},{activeSection:false},{activeSection:false},{activeSection:false}],
+activeSectionList:[{isActive:true,id:1},{isActive:false,id:2},{isActive:false,id:3},{isActive:false,id:4},{isActive:false,id:5},{isActive:false,id:6}],
 
 
     }
@@ -10,12 +10,15 @@ activeSectionList:[{activeSection:true},{activeSection:false},{activeSection:fal
 
 methods: {
     
-activeSection(){
-this.isActive =!thisisActive
-activeSectionList.forEach(activeList => {
- activeList.activeSection=false
+activeSection(list){
+this.isActive =!this.isActive
+this.activeSectionList.forEach(activeList => {
+ activeList.isActive=false
 });
-console.log(activeSectionList)
+list.isActive=!list.isActive
+
+
+console.log(this.activeSectionList);
 }
 
 },
