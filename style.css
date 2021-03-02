@@ -1,7 +1,22 @@
 
 :root{
   --dark: #212529;
-
+    --black:rgb( 0, 0, 0);
+    --white:rgb(255, 255, 255);
+    --white-on-dark: rgb(255,255,255);
+    --navy: #001935;
+    --red: rgb(255,73,47);
+    --orange: rgb(255,138,0);
+    --yellow: rgb(232, 215, 56);
+    --green:#00cf35;
+    --blue: #00b8ff;
+    --purple: #7c5cff;
+    --pink: rgb(255, 98, 206);
+    --accent: rgb(0, 184, 255);
+    --secondary-accent: rgb(229, 231, 234);
+    --follow: rgb(243, 248, 251);
+--big-tumblr-font-size: 60px;
+    --font-family: "Favorit", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 
 }
 
@@ -15,7 +30,7 @@
 }
 
 body {
-    font-family: Open Sans, sans-serif;
+    font-family:var(--font-family);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -57,6 +72,7 @@ line-height: 1.5;
 padding: 6px 15px;
 
 }
+
 nav ul{
 list-style: none;
 margin:auto 0;
@@ -69,24 +85,95 @@ position: fixed;
 
 
 
-nav .nav-list{
+nav .indicator{
 width: 1rem;
 height: 1rem;
 border-radius: 50%;
 margin-top: 10px;
-border: 2px solid black;
+border: 3px solid #c5d0d6;
 cursor: pointer;
+transition: border 0.5s;
 }
 
-nav .nav-listactive{
-background: #000;
+nav .active-indicator{
+background: #ffffff;
+border: 3px solid #ffffff;
+}
+nav .indicator:hover{
+border: 3px solid #ffffff;
+transition: 0.5s;
+
+}
+
+.indicator a{
+display:block;
+width: 1rem;
+height: 1rem;
+margin-left: -4px;
+margin-top: -4px;
 }
 
 
-.first-section{
+
+
+
+.login{
 background-color:thistle;
 text-align: center;
 padding-top: 5rem;
+height: 95vh;
+}
+
+.login-contents h1 a{
+font-size: var(--big-tumblr-font-size);
+text-decoration: none;
+color: var(--white-on-dark);
+font-weight:bolder;
+
+}
+
+section{
 height: 100vh;
 }
 
+.about-tumblr{
+
+bottom: 0;
+background-color: var(--green);
+width: 100%;
+height: 2.8rem;
+text-align: center;
+/* padding-bottom:2rem ; */
+}
+
+.about-tumblr a{
+margin-bottom: 0;
+text-decoration: none;
+color: var(--white);
+}
+
+#tumblricons{
+background-color: var(--green);
+
+}
+#Blogs{
+background-color: var(--purple);
+
+}
+#workflow{
+background-color: var(--navy);
+
+
+}
+
+#media{
+
+background-color: var(--orange);
+
+}
+
+#footer{
+
+background-color: var(--navy);
+
+}
