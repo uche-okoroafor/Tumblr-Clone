@@ -1,32 +1,49 @@
-const nav = Vue.createApp({
+const Container = Vue.createApp({
 data() {
     return {
-  isActive:false,      
-activeSectionList:[{isActive:true,id:1},{isActive:false,id:2},{isActive:false,id:3},{isActive:false,id:4},{isActive:false,id:5},{isActive:false,id:6}],
-
+      
+indicatorList:[{isActive:'active-indicator',id:"#login"},{isActive:false,id:"#tumblricons"},{isActive:false,id:"#Blogs"},{isActive:false,id:"#workflow"},{isActive:false,id:"#media"},{isActive:false,id:'#footer'}],
+  scrolled: false,
 
     }
 },
 
+
+// mounted() {
+//             document.getElementById('container').addEventListener('scroll', this.handleScroll);
+//             console.log('scrolling Injectesssssssssd');
+//         },
+//         beforeUnmount() {
+//             document.getElementById('container').removeEventListener('scroll');
+//             console.log('scrolling Destroyed');
+    // },
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+console.log('yesssssssssssss');
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
+console.log('yesssssssssssss');
+  },
+
+
 methods: {
     
-activeSection(list){
-this.isActive =!this.isActive
-this.activeSectionList.forEach(activeList => {
- activeList.isActive=false
+activeIndicator(indicator){
+this.indicatorList.forEach(indicator => {
+ indicator.isActive=false
 });
-list.isActive=!list.isActive
-
-
-console.log(this.activeSectionList);
+indicator.isActive='active-indicator'
 }
 
 },
 
-
-
-
-
+ handleScroll() {
+      if (this.scrolled = window.scrollY > 0) {
+               console.log('yesssssssssssss');
+    }
+console.log('nooooooooo');
+ }
 })
 
-nav.mount('#nav')
+Container.mount('#container')
