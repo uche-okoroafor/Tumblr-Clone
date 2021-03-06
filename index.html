@@ -1,45 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Tumbir</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
+</head>
+
+<body>
+    <div   id="container">
+        <nav id="nav">
+            <div class="navbar">
+                <div class="tumblr-input">
+                    <i class="fab fa-tumblr fa-2x "></i>
+                    <input type="text" placeholder="Search Tumblr" class="rounded ml-3 h-75 ">
+
+                </div>
+
+                <div class="login-signup-btn">
+
+                    <button class="btn btn-success ">Log in</button><button @click='srolled'
+                        class="btn btn-info ml-3">Sign up</button>
+
+                </div>
+            </div>
+            <ul class="nav-indicator-container indicator-group" id="nav-indicator">
+                <li v-for="indicator in indicatorList" @click='activeIndicator(indicator)' class="indicator"
+                    :class="indicator.isActive"><a :href="indicator.id" :id='indicator.linkId'></a> </li>
+
+            </ul>
+
+            <section id="login" class="login">
+                <div class="login-contents">
+                    <h1><a href="">tumblr</a></h1>
+                    <p>Make stuff, look at stuff,talk</br> about stuff, find your people.</p>
+                    <button class="btn-info">Get Started</button></br>
+                    <button class="btn-success">Log in</button>
+
+                    <p> <i class="fa fa-location-arrow" aria-hidden="true"></i> Here is what is Trending</p>
+                </div>
 
 
-</template>
-
-<script>
-export default {
-  name: 'About',
-
-
-data(){
-return{
-
-indicatorList:[{isActive:'active-indicator',id:"#login",linkId:'0'},
-{isActive:false,id:"#tumblricons",linkId:'1'},{isActive:false,id:"#Blogs",linkId:'2'},
-{isActive:false,id:"#workflow",linkId:'3'},{isActive:false,id:"#media",linkId:'4'},
-{isActive:false,id:'#footer',linkId:'5'}],
-
-scrolledDown:0,
+            </section>
+            <div class="about-tumblr">
+                <a href="tumblricons">What is Tumblr?</a>
+            </div>
+        </nav>
 
 
-
-}
-
-
-},
+        <div id="message" ref="message">Please scroll to check if the box is visible</div>
 
 
-methods: {
-  
-activeIndicator(indicator){
-this.indicatorList.forEach(indicator => {
- indicator.isActive=false
-});
-indicator.isActive='active-indicator';   
-},
+        <section id="tumblricons"  class="tumblricons">
+<div class="box" ref="tumblricons"></div>
+            <div class="about-text">
+                <h1>Tumblr is so easy to use <br> that it’s hard to explain.</h1>
 
+                <p> We made it really, really simple for people to make a blog and put whatever <br> they want on it.
+                    Stories, photos, GIFs, TV shows, links, quips, dumb jokes,<br> smart jokes, Spotify tracks, mp3s,
+                    videos, fashion, art, deep stuff. Tumblr <br> is 519 million different blogs, filled with literally
+                    whatever.</p>
+            </div>
 
-},
+        </section>
+        <section id="Blogs" class="Blogs">
+            <div class="blogs-text">
+                <h1>
+                    Tumblr is blogs.</h1>
 
+                <p> Turns out that when you make it easy to create interesting things’s <br> exactly what people do. All
+                    those great, random blogs your friends send you, those are Tumblr blogs. We’ll help you find and
+                    follow blogs like <br> , and we’ll help other people find and follow yours.
+                </p>
+            </div>
+        </section>
+        <section id="workflow" class="workflow">
+            <div class="workflow-text">
 
-}
-</script>
+                <h1> You already know <br> how this works.</h1>
+                <p>
+                    Once you follow a blog, all of its posts show up in <br> your dashboard, just like you’d expect. See
+                    <br> something great? Reblog it to your own blog. Add <br> commentary if you like. Make it your own.
+                    Other <br> people will do the same to your posts. That’s how <br> you meet people here.
+                </p>
+            </div>
+        </section>
+        <section id="media" class="media">
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+            <div class="media-text">
+                <h1>Seriously, put anything <br> you want here.</h1>
+
+                <p>Seven post types to get you started. Your brain can do the rest. This thing <br> is yours. Use it
+                    however you like.</p>
+            </div>
+        </section>
+        <section id="footer" class="footer">
+            <div class="footer-text">
+                <h1>
+                    Okay, it’s not actually hard to <br> explain.
+                </h1>
+                <p>
+                    We lied. But now you understand this thing. So come on in.
+                </p>
+            </div>
+        </section>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
