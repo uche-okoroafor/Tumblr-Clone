@@ -9,6 +9,7 @@
     --orange: rgb(255,138,0);
     --yellow: rgb(232, 215, 56);
     --green:#00cf35;
+--green-line:#00b82f;
     --blue: #00b8ff;
     --purple: #7c5cff;
     --pink: rgb(255, 98, 206);
@@ -28,7 +29,10 @@
 @-ms-viewport {
     width: device-width;
 }
-
+html, body {
+  height: 100vh;
+  overflow:auto;
+}
 body {
     font-family:var(--font-family);
     font-size: 1rem;
@@ -37,7 +41,19 @@ body {
     margin: 0;
     color: #525f7f;
     background-color: #f8f9fe;
+color:var(--white);
+}
+
+
+#container{
 width: 100%;
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+scrollbar-width: thin;
+scrollbar-color: rgba(var(--black),.4) rgba(var(--white),.1);
 }
 
 nav{
@@ -49,6 +65,7 @@ height: 100vh;
 position: fixed;
 width: 100%;
 top:0;
+z-index: 100;
 }
 
 .tumblr-input{
@@ -56,20 +73,35 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 }
+.tumblr-input i{
+margin-left: 10px
+}
 .tumblr-input input{
-width:27rem;
+width:30rem;
 border: none;
 height: 2rem !important;
 }
 
 
-.login-signup-btn  button{
+.login-signup-btn  a{
 width: 6rem;
 color:var(--dark);
 font-size: 1rem;
 font-weight: 700;
 line-height: 1.5;
-padding: 6px 15px;
+padding: 6px 13px;
+
+}
+
+.login-signup-btn :nth-child(1){
+
+background-color: var(--green);
+
+}
+
+.login-signup-btn :nth-child(2){
+
+background-color: var(--blue);
 
 }
 
@@ -78,9 +110,10 @@ list-style: none;
 margin:auto 0;
 color:red;
 width: 2rem;
-margin-left: 4rem;
-margin-top: 12rem;
+margin-left: 1.5rem;
+margin-top: 13.6rem;
 position: fixed;
+z-index: 100;
 }
 
 
@@ -95,7 +128,7 @@ cursor: pointer;
 transition: border 0.5s;
 }
 
-nav .active-indicator{
+nav .activeindicator{
 background: #ffffff;
 border: 3px solid #ffffff;
 }
@@ -113,27 +146,102 @@ margin-left: -4px;
 margin-top: -4px;
 }
 
+.btn-success{
+background-color: var(--green);
 
-
-
-
-.login{
-background-color:thistle;
-text-align: center;
-padding-top: 5rem;
-height: 95vh;
 }
 
+.btn-success:hover{
+
+background-color: var(--green);
+}
+
+#login{
+
+background-color:var(--navy);
+text-align: center;
+padding-top: 3rem;
+height: 95vh;
+}
+.login-contents{
+text-align: center;
+
+
+}
+
+
 .login-contents h1 a{
-font-size: var(--big-tumblr-font-size);
+font-size: 4.5rem;
 text-decoration: none;
 color: var(--white-on-dark);
 font-weight:bolder;
 
 }
 
+.login-contents h1{
+font-weight: 600;
+}
+
+.login-contents :nth-child(2){
+width: 300px;
+font-family: var(--font-family);
+font-size: 1.3125rem;
+font-weight: 700;
+line-height: 1.5238;
+margin: 0 auto;
+}
+
+.login-contents .link-tags{
+
+display: flex;
+flex-direction: column;
+width: 23%;
+margin: 0 auto;
+}
+
+.login-contents .link-tags a{
+border-radius: 3px;
+font-family: var(--font-family);
+font-size: 1rem;
+font-weight: 700;
+line-height: 1.5;
+padding: 10px 15px;
+width: 100%;
+color: var(--white-on-dark);
+}
+
+.link-tags :nth-child(1){
+background-color: var(--blue);
+}
+.link-tags :nth-child(2){
+margin-top: 20px;
+background-color: var(--green);
+}
+
+.login-contents .store{
+display: flex;
+flex-direction: row;
+margin: 0 auto;
+width: 23%;
+}
+
+.login-contents .store :nth-child(1){
+width:11rem;
+height: auto;
+}
+
+.login-contents .store :nth-child(2){
+width:10.2rem;
+height: auto;
+margin-left: 1.2rem;
+}
+
+
 section{
-height: 100vh;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+
 }
 
 .about-tumblr{
@@ -143,19 +251,119 @@ background-color: var(--green);
 width: 100%;
 height: 2.8rem;
 text-align: center;
-/* padding-bottom:2rem ; */
+padding-bottom:2rem ;
 }
 
 .about-tumblr a{
 margin-bottom: 0;
 text-decoration: none;
 color: var(--white);
+vertical-align: baseline;
 }
 
-#tumblricons{
+
+.terms-links{
+margin-top: 8rem;
+display: flex;
+flex-flow: row;
+justify-content: flex-start;
+}
+
+.terms-links a{
+text-decoration: none;
+color:var(--white) ;
+margin-left: 0.5rem;
+
+}
+.terms-links :nth-child(5){
+display: inline-block;
+text-align:right;
+margin-left: 65%;
+}
+
+
+
+#About{
 background-color: var(--green);
+position: relative;
+}
+
+.icons{
+height: 67vh;
+}
+.icons .Tumblr{
+position: absolute;
+font-size: 8rem;
+right: 47%;
+bottom: 50%;
+color: var(--green);
+-webkit-text-stroke: 5px var(--white);
+opacity: 0;
+}
+
+.icons i[class*='fas']{
+color: var(--green);
+-webkit-text-stroke: 5px var(--green-line);
+position: absolute;
+/* opacity: 0; */
+}
+
+.icons .fa-plus{
+font-size: 2.5rem;
+right: 0;
+bottom: 56.5%;
+border-radius:0px;
+}
+
+.icons .fa-plus2{
+font-size: 2.5rem;
+right:42%;
+bottom:90%;
+border-radius:0px;
+}
+
+.icons .fa-plus-big{
+font-size: 4rem;
+right: 54%;
+bottom: 50%;
 
 }
+
+.icons .fa-heart-small{
+font-size: 3rem;
+right: 100%;
+bottom: 0%;
+}
+
+.icons .fa-heart-big{
+font-size: 3.5rem;
+right: 50%;
+bottom:100%;
+}
+.icons .fa-heart-smaller{
+
+font-size: 2rem;
+right: 65%;
+bottom: 45%;
+}
+
+.about-text{
+margin:0 auto;
+width: 40%;
+}
+
+.about-text h1{
+font-size: 3rem;
+
+}
+
+ .about-text p{
+
+font-size: 1rem;
+line-height: 1.5;
+margin-bottom: 5px;
+}
+
 #Blogs{
 background-color: var(--purple);
 
@@ -177,3 +385,7 @@ background-color: var(--orange);
 background-color: var(--navy);
 
 }
+
+
+
+c
