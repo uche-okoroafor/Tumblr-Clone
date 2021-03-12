@@ -2,7 +2,7 @@
 :root{
   --dark: #212529;
     --black:rgb( 0, 0, 0);
-    --white:rgb(255, 255, 255);
+    --white:#ffffff;
     --white-on-dark: rgb(255,255,255);
     --navy: #001935;
     --red: rgb(255,73,47);
@@ -32,6 +32,7 @@
 html, body {
   height: 100vh;
   overflow:auto;
+
 }
 body {
     font-family:var(--font-family);
@@ -56,10 +57,7 @@ scrollbar-width: thin;
 scrollbar-color: rgba(var(--black),.4) rgba(var(--white),.1);
 }
 
-nav{
-height: 100vh;
 
-}
 
 .navbar{
 position: fixed;
@@ -80,6 +78,8 @@ margin-left: 10px
 width:30rem;
 border: none;
 height: 2rem !important;
+background-color: rgba(253, 254, 255, 0.3);
+color: var(--white);
 }
 
 
@@ -161,7 +161,6 @@ background-color: var(--green);
 background-color:var(--navy);
 text-align: center;
 padding-top: 3rem;
-height: 95vh;
 }
 .login-contents{
 text-align: center;
@@ -191,7 +190,7 @@ line-height: 1.5238;
 margin: 0 auto;
 }
 
-.login-contents .link-tags{
+.link-tags{
 
 display: flex;
 flex-direction: column;
@@ -199,7 +198,7 @@ width: 23%;
 margin: 0 auto;
 }
 
-.login-contents .link-tags a{
+.link-tags a{
 border-radius: 3px;
 font-family: var(--font-family);
 font-size: 1rem;
@@ -218,19 +217,19 @@ margin-top: 20px;
 background-color: var(--green);
 }
 
-.login-contents .store{
+.store{
 display: flex;
 flex-direction: row;
 margin: 0 auto;
 width: 23%;
 }
 
-.login-contents .store :nth-child(1){
+.store :nth-child(1){
 width:11rem;
 height: auto;
 }
 
-.login-contents .store :nth-child(2){
+.store :nth-child(2){
 width:10.2rem;
 height: auto;
 margin-left: 1.2rem;
@@ -245,20 +244,23 @@ section{
 }
 
 .about-tumblr{
-
+display: flex;
+flex-direction: column;
+justify-content: center;
 bottom: 0;
+position: absolute;
 background-color: var(--green);
 width: 100%;
 height: 2.8rem;
-text-align: center;
-padding-bottom:2rem ;
 }
 
 .about-tumblr a{
+padding-bottom: 0;
 margin-bottom: 0;
+margin-top: 1rem;
 text-decoration: none;
 color: var(--white);
-vertical-align: baseline;
+font-weight: bold;
 }
 
 
@@ -305,7 +307,7 @@ opacity: 0;
 color: var(--green);
 -webkit-text-stroke: 5px var(--green-line);
 position: absolute;
-/* opacity: 0; */
+opacity: 0;
 }
 
 .icons .fa-plus{
@@ -352,13 +354,11 @@ margin:0 auto;
 width: 40%;
 }
 
-.about-text h1{
+.about-text h1,.blogs-text h1,.workflow-text h1,.media-text h1,.footer-login-contents h1{
 font-size: 3rem;
-
 }
 
- .about-text p{
-
+ .about-text p,.blogs-text p,.workflow-text p,.media-text p,.footer-login-contents p{
 font-size: 1rem;
 line-height: 1.5;
 margin-bottom: 5px;
@@ -368,24 +368,289 @@ margin-bottom: 5px;
 background-color: var(--purple);
 
 }
+.blogs-text{
+text-align: left;
+max-width: 540px;
+padding-top: 8rem;
+margin-left: 9rem;
+}
+.Blog{
+margin-left: 9rem;
+display:flex;
+flex-flow:wrap row;
+width:105%;
+color: var(--black);
+margin-top: 25rem;
+}
+
+.blogs{
+border-radius:5px;
+width: 300px;
+max-width: 300px;
+margin-right: 20px;
+background-color: var(--white);
+}
+
+.blog-heading {
+height: 55px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+
+
+
+.blog-heading:nth-child(1){
+color: var(--black);
+
+}
+
+.blog-heading :nth-child(3){
+color: var(--blue);
+}
+
+
+.blog-heading img{
+width: 40px;
+height: 40px;
+border-radius:5px;
+}
+
+
+.blog-body img{
+width:100%;
+height: auto;
+
+}
+
+
+.loading{
+display:flex;
+margin: 0 auto;
+margin-left: 50%;
+}
+
+.loading div{
+width: 20px;
+height: 20px;
+margin: 2px;
+border-radius: 5px;
+background-color: #b2b7c5;
+
+
+}
+
+
+
 #workflow{
 background-color: var(--navy);
-
+display: flex;
+color: var(--black);
+}
+.work-icons{
+width: 60%;
+padding-top: 6rem;
+padding-left: 10rem;
+}
+.workflow-text{
+padding-top: 9rem;
+color: var(--white);
 
 }
+
+.sleeping-box{
+height:7.5rem ;
+margin-top: 40rem;
+opacity: 0;
+}
+.postiforward{
+margin-top: 40rem;
+opacity: 0;
+}
+.sleeping-box img,.postiforward > img{
+border-radius: 3px;
+}
+
+.icons-container{
+background-color:var(--white);
+height: 6rem;
+width: 33rem;
+float: right;
+border-radius: 3px;
+margin-right: 3rem;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+text-align: center;
+}
+
+.post-container{
+background-color:var(--white);
+float: right;
+width: 33rem;
+border-radius: 3px;
+margin-right: 3rem;
+}
+
+.post-container div{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+height: 3.5rem;
+}
+
+
+.icon svg{
+margin-top: 5px;
+transition: all ease-out 0.2s;
+}
+
+.icon svg:hover{
+margin-top: 0px;
+transition: all ease-out 0.2s;
+}
+
+.icon div{
+width:40px ;
+height:50px;
+}
+
+
+.icons-container :nth-child(1) svg{
+fill: var(--black);
+
+}
+
+.icons-container :nth-child(2) svg{
+fill:var(--red);
+
+}
+.icons-container :nth-child(3) svg{
+fill:var(--orange);
+
+}
+.icons-container :nth-child(4) svg{
+fill:var(--green);
+
+}
+.icons-container :nth-child(5) svg{
+fill:var(--blue);
+
+}
+.icons-container :nth-child(6) svg{
+fill:var(--purple);
+
+}
+.icons-container :nth-child(7) svg{
+fill:var(--pink);
+
+}
+
+
+.post-container img{
+width: 100%;
+}
+
+.post-container div span{
+font-weight: bold;
+margin-left: 25px;
+}
+
+.post-container div i{
+
+color:#444444;
+margin-right: 25px;
+}
+
+
+
 
 #media{
-
+display: flex;
+flex-direction: column;
 background-color: var(--orange);
+align-items: center;
+}
+
+.media-icons{
+
+height:60%;
+width: 40%;
+}
+
+.media-text{
+text-align: center;
+width:100%;
+
+}
+.media-icons-container {
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+padding-top: 60px;
 
 }
 
-#footer{
 
+.media-icons-container div{
+margin: 5px;
+
+display: flex;
+flex-direction: column;
+
+text-align: center;
+
+justify-content: center;
+align-items: center;
+
+}
+
+.iconContainer{
+transition: all 1s;
+transform: scale(0.5,0.5);
+opacity: 0;
+}
+
+.iconContainer:hover{
+transition: all 1s;
+transform: scale(1,1);
+
+}
+
+
+
+.media-icons-container div > div{
+width: 110px;
+height: 110px;
+border-radius: 50%;
+background-color: var(--white);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+
+
+
+
+
+#footer{
+text-align: center;
 background-color: var(--navy);
 
 }
+.footer-login-contents{
+padding-top: 8rem;
 
 
+}
 
-c
+.footer-login-contents a{
+text-decoration: none;
+color: var(--white);
+
+}
