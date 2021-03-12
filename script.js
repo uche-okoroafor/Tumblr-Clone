@@ -2,11 +2,14 @@ const Container = Vue.createApp({
 data() {
     return {
       
-indicatorList:[{isActive:"activeindicator",id:"#login",linkId:'0'},
+indicatorList:[
+{isActive:"activeindicator",id:"#login",linkId:'0'},
 {isActive:false,id:"#About",linkId:'1'},{isActive:false,id:"#Blogs",linkId:'2'},
 {isActive:false,id:"#workflow",linkId:'3'},{isActive:false,id:"#media",linkId:'4'},
 {isActive:false,id:'#footer',linkId:'5'}],
-blogs:[{name:"uche",url:"averterT/walkinman.webp",averter:"averterT/artb.jpg",notes:2500},
+
+blogs:[
+{name:"uche",url:"averterT/walkinman.webp",averter:"averterT/artb.jpg",notes:2500},
 {name:"uche",url:"averterT/avatar.jpg",averter:"averterT/artb.jpg",notes:2500},
 {name:"uche",url:"averterT/artbylgg.jpg",averter:"averterT/artbylgg.jpg",notes:'2500'},
 {name:"uche",url:"averterT/artbylittl.jpg",averter:"averterT/artbylittl.jpg",notes:'2500'},
@@ -16,11 +19,11 @@ blogs:[{name:"uche",url:"averterT/walkinman.webp",averter:"averterT/artb.jpg",no
 {name:"uche",url:"averterT/artb.jpg",averter:"averterT/artb.jpg",notes:'2500'},
 {name:"uche",url:"averterT/artb.jpg",averter:"averterT/artb.jpg",notes:'2500'},
 {name:"uche",url:"averterT/artb.jpg",averter:"averterT/artb.jpg",notes:'2500'},
-]
+],
 
-    }
 
-},
+
+    }},
 
 mounted () {
   document.getElementById('container').addEventListener('scroll', ()=>this.onScroll(this.$refs));
@@ -64,6 +67,8 @@ this.indicatorList.forEach(indicator => {
 indicator.isActive="activeindicator"; 
 this.iconsShow(this.indicatorList);
 this.showBlogs(this.indicatorList);
+this.handleSlidingPosts(this.indicatorList)
+this.handleMediaIconPop(this.indicatorList)
 },
 
 
@@ -87,13 +92,13 @@ this.$refs.heartSmaller.style ="opacity:0;right:100%"}
 },
 
 showBlogs(indicator){
-this.loading(false);
+this.handleLoadingDots(false);
 this.$refs.loading.style="display:flex";
 this.$refs.blogs.style="display:none";
 
 setTimeout(() => {
   if(indicator[2].isActive.length){
-this.loading(true);
+this.handleLoadingDots(true);
 this.$refs.loading.style="display:none";
 this.$refs.blogs.style="display:block";
 this.$refs.Blog.style="margin-top:0rem;transition:cubic-bezier(.165,.84,.44,1) 1s";
@@ -108,8 +113,7 @@ else
 },
 
 
-
-loading(clearInterVal){
+handleLoadingDots(clearInterVal){
 const interVal = setInterval(() => {
 this.$refs.loadOne.style=" transform: scale(1,1.5);;background-color:#b2b7c5;transition: all  0.5s" 
 setTimeout(() => {
@@ -128,7 +132,39 @@ this.$refs.loadThree.style="transform: scale(1,1.5);background-color:#b2b7c5;tra
 
 clearInterVal && clearInterval(interVal);
 
+},
+
+handleSlidingPosts(indicator){
+if(indicator[3].isActive.length){
+this.$refs.sleepyBox.style="margin-top:0;opacity:1 ;transition: all ease-out 0.5s"
+setTimeout(() => {
+  this.$refs.postiforward.style="margin-top:0;opacity:1 ;transition: all ease-out 0.5s"
+}, 200);
 }
+else{
+this.$refs.sleepyBox.style="margin-top:40rem" 
+  this.$refs.postiforward.style="margin-top:40rem;transition: all  0.5s"
+}
+
+
+},
+
+handleMediaIconPop(indicator){
+let timer = 0;
+if(indicator[4].isActive.length){
+document.querySelectorAll('.iconContainer').forEach(icon => {
+setTimeout(()=>{
+icon.style="opacity:1;transform:scale(1,1);transition: transform 1s cubic-bezier(.165,.84,.44,1);"
+},timer+=150) });
+}
+else{
+document.querySelectorAll('.iconContainer').forEach(icon => {
+icon.style="opacity:0;transform:scale(0.5,0.5)"; 
+})
+
+}
+}
+
 
 
 
