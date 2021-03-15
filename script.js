@@ -9,16 +9,16 @@ indicatorList:[
 {isActive:false,id:'#footer',linkId:'5'}],
 
 blogs:[
-{name:"uche",url:"averterT/walkinman.webp",averter:"averterT/artb.jpg",notes:2500},
-{name:"uche",url:"averterT/avatar.jpg",averter:"averterT/artb.jpg",notes:2500},
-{name:"uche",url:"averterT/artbylgg.jpg",averter:"averterT/artbylgg.jpg",notes:'2500'},
-{name:"uche",url:"averterT/artbylittl.jpg",averter:"averterT/artbylittl.jpg",notes:'2500'},
-{name:"uche",url:"averterT/artb.jpg",averter:"averterT/artb.jpg",notes:'2500'},
-{name:"uche",url:"averterT/artb.jpg",averter:"averterT/artb.jpg",notes:'2500'},
-{name:"uche",url:"averterT/artb.jpg",averter:"averterT/artb.jpg",notes:'2500'},
-{name:"uche",url:"averterT/artb.jpg",averter:"averterT/artb.jpg",notes:'2500'},
-{name:"uche",url:"averterT/artb.jpg",averter:"averterT/artb.jpg",notes:'2500'},
-{name:"uche",url:"averterT/artb.jpg",averter:"averterT/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/walkinman.webp",averter:"assets/artb.jpg",notes:2500},
+{name:"uche",url:"assets/avatar.jpg",averter:"assets/artb.jpg",notes:2500},
+{name:"uche",url:"assets/artbylgg.jpg",averter:"assets/artbylgg.jpg",notes:'2500'},
+{name:"uche",url:"assets/artbylittl.jpg",averter:"assets/artbylittl.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
 ],
 
 
