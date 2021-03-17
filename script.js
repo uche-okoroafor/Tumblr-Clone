@@ -9,16 +9,16 @@ indicatorList:[
 {isActive:false,id:'#footer',linkId:'5'}],
 
 blogs:[
-{name:"uche",url:"assets/walkinman.webp",averter:"assets/artb.jpg",notes:2500},
-{name:"uche",url:"assets/avatar.jpg",averter:"assets/artb.jpg",notes:2500},
-{name:"uche",url:"assets/artbylgg.jpg",averter:"assets/artbylgg.jpg",notes:'2500'},
-{name:"uche",url:"assets/artbylittl.jpg",averter:"assets/artbylittl.jpg",notes:'2500'},
-{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
-{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
-{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
-{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
-{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
-{name:"uche",url:"assets/artb.jpg",averter:"assets/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/walkinman.webp",avatar:"assets/artb.jpg",notes:2500},
+{name:"uche",url:"assets/avatar.jpg",avatar:"assets/artb.jpg",notes:2500},
+{name:"uche",url:"assets/artbylgg.jpg",avatar:"assets/artbylgg.jpg",notes:'2500'},
+{name:"uche",url:"assets/artbylittl.jpg",avatar:"assets/artbylittl.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",avatar:"assets/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",avatar:"assets/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",avatar:"assets/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",avatar:"assets/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",avatar:"assets/artb.jpg",notes:'2500'},
+{name:"uche",url:"assets/artb.jpg",avatar:"assets/artb.jpg",notes:'2500'},
 ],
 
 
@@ -27,6 +27,7 @@ blogs:[
 
 mounted () {
   document.getElementById('container').addEventListener('scroll', ()=>this.onScroll(this.$refs));
+// ()=>this.handleBackgroundImage(this.blogs);
 
   },
   beforeUnmount() {
@@ -163,8 +164,14 @@ icon.style="opacity:0;transform:scale(0.5,0.5)";
 })
 
 }
-}
+},
 
+// handleBackgroundImage=(blogs)=>{
+// 		let num = Math.floor(Math.random() *blogs.length);
+// // this.$refs.login.style ='background-image:url'+(blogs[num].url);
+// // this.$refs.footer.style ='background-image: url'('+    +);'background-position: center; background-repeat: no-repeat;background-size: cover; position: relative;'
+// console.log(blogs[num].url)
+// }
 
 
 
