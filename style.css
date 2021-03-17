@@ -156,11 +156,15 @@ background-color: var(--green);
 background-color: var(--green);
 }
 
-#login{
+#login,#footer{
 
 background-color:var(--navy);
 text-align: center;
 padding-top: 3rem;
+background-position:center;
+background-repeat: no-repeat;
+background-size: cover;
+ position: relative;
 }
 .login-contents{
 text-align: center;
@@ -640,8 +644,6 @@ align-items: center;
 
 #footer{
 text-align: center;
-background-color: var(--navy);
-
 }
 .footer-login-contents{
 padding-top: 8rem;
