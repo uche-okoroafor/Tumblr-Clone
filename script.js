@@ -115,7 +115,7 @@ else
 
 handleLoadingDots(clearInterVal){
 const interVal = setInterval(() => {
-this.$refs.loadOne.style=" transform: scale(1,1.5);;background-color:#b2b7c5;transition: all  0.5s" 
+this.$refs.loadOne.style=" transform: scale(1,1.5);background-color:#b2b7c5;transition: all  0.5s" 
 setTimeout(() => {
  this.$refs.loadTwo.style="transform: scale(1,1.5);background-color:#b2b7c5;transition: all 0.5s"  
 }, 125);
