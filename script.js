@@ -9,18 +9,29 @@ const Container = Vue.createApp({
         { isActive: false, id: '#footer', linkId: '5' }],
 
       blogs: [
-        { name: "uche", url: "assets/walkinman.webp", avatar: "assets/artb.jpg", notes: 2500 },
-        { name: "uche", url: "assets/avatar.jpg", avatar: "assets/artb.jpg", notes: 2500 },
-        { name: "uche", url: "assets/artbylgg.jpg", avatar: "assets/artbylgg.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artbylittl.jpg", avatar: "assets/artbylittl.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
-      ],
+        { name: "kenta-nikki", url: "assets/background-image/kenta-nikki.jpg", avatar: "assets/avatar/kenta-nikki.jpg", notes: 2500,artimg:'' },
+        { name: "bethfuller", url: "assets/background-image/bethfuller.png", avatar: "assets/avatar/bethfuller.jpg", notes: 2500,artimg:'' },
+        { name: "artbylittlebug", url: "assets/background-image/artbylittlebug.jpg", avatar: "assets/avatar/artbylittlebug.jpg", notes: 2500,artimg:'' },
+        { name: "instantreigen", url: "assets/background-image/instantreigen.jpg", avatar: "assets/avatar/instantreigen.jpg", notes: 2500,artimg:'' },
+        { name: "Kpop", url: "assets/background-image/Kpop.jpg", avatar: "assets/avatar/Kpop.jpg", notes: 2500,artimg:'' },
+        { name: "mathildejr", url: "assets/background-image/mathildejr.jpg", avatar: "assets/avatar/mathildejr.jpg", notes: 2500,artimg:'' },
+        { name: "nooskadraws", url: "assets/background-image/nooskadraws.jpg", avatar: "assets/avatar/nooskadraws.jpg", notes: 2500,artimg:'' },
+        { name: "onurilter", url: "assets/background-image/onurilter.jpg", avatar: "assets/avatar/onurilter.jpg", notes: 2500,artimg:'' },
+        { name: "tvoom", url: "assets/background-image/tvoom.jpg", avatar: "assets/avatar/tvoom.jpg", notes: 2500,artimg:'' },
+        { name: "terahsvent", url: "assets/background-image/terahsvent.jpg", avatar: "assets/avatar/terahsvent.jpg", notes: 2500,artimg:'' },
+        { name: "michellekingdom", url: "assets/background-image/michellekingdom.jpg", avatar: "assets/avatar/michellekingdom.jpg", notes: 2500,artimg:'' },
+        { name: "artofmaquenda", url: "assets/background-image/artofmaquenda.gif", avatar: "assets/avatar/artofmaquenda.jpg", notes: 2500,artimg:'' },
+        { name: "outerspacebih", url: "assets/background-image/terahsvent.jpg", avatar: "assets/avatar/terahsvent.jpg", notes: 2500,artimg:'' },
 
+      ],
+postedBy:[
+{
+artistName:'user',
+artistAvatar:'avatar',
+
+}
+
+]
 
     }
   },
@@ -73,6 +84,10 @@ const Container = Vue.createApp({
       this.handleMediaIconPop(this.indicatorList)
     },
 
+handleSearchInput(){
+document.getElementsByClassName('searchInput').style='background-color: rgba(253, 254, 255,1);'
+console.log(document.getElementsByClassName('searchInput'))
+},
 
     iconsShow(indicator) {
       if (indicator[1].isActive.length) {
@@ -175,11 +190,13 @@ const Container = Vue.createApp({
 let num = Math.floor(Math.random() * blogs.length);
       this.$refs.login.style ='background-image:url(' + blogs[num].url + ')';
       this.$refs.footer.style ='background-image:url(' + blogs[num].url + ')';
-
+this.postedBy[0].artistAvatar =blogs[num].avatar
+this.postedBy[0].artistName =blogs[num].name
 setInterval(() => { let num = Math.floor(Math.random() * blogs.length);
       this.$refs.login.style ='background-image:url(' + blogs[num].url + ')';
       this.$refs.footer.style ='background-image:url(' + blogs[num].url + ')';
-  
+  this.postedBy[0].artistAvatar =blogs[num].avatar
+this.postedBy[0].artistName =blogs[num].name
 },10000);
     }
 
