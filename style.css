@@ -71,9 +71,17 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 }
-.tumblr-input i{
-margin-left: 10px
+.tumblr-input svg{
+margin-left: 10px;
+color:var(--white);
 }
+
+
+.tumblr-input i{
+margin-left: 10px;
+color:var(--white);
+}
+
 .tumblr-input input{
 width:30rem;
 border: none;
@@ -159,6 +167,7 @@ background-color: var(--green);
 #login,#footer{
 
 background-color:var(--navy);
+background-color: rgb(255, 255, 255,0.2);
 text-align: center;
 padding-top: 3rem;
 background-position:center;
@@ -269,10 +278,15 @@ font-weight: bold;
 
 
 .terms-links{
-margin-top: 8rem;
-display: flex;
-flex-flow: row;
-justify-content: flex-start;
+margin-top: 7.3rem;
+text-align:left;
+width: 100%;
+}
+
+.terms-links div{
+display: inline-block;
+width: 83%;
+padding-right: 7px;
 }
 
 .terms-links a{
@@ -281,10 +295,16 @@ color:var(--white) ;
 margin-left: 0.5rem;
 
 }
+
+
 .terms-links :nth-child(5){
-display: inline-block;
 text-align:right;
-margin-left: 65%;
+}
+
+.terms-links img{
+width:24px;
+height:24px;
+border-radius: 5px;
 }
 
 
