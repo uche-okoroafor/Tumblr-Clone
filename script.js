@@ -99,9 +99,12 @@ console.log(document.getElementsByClassName('searchInput'))
           this.$refs.plusIconTwo.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:42%;bottom:90%"
           this.$refs.heartBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:48%;bottom:78%"
           this.$refs.heartSmaller.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:65%;bottom:45%"
+          this.$refs.earPhoneBiggest.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:53%;bottom:70%"
+
         }, 500)
       }
       else {
+          this.$refs.earPhoneBiggest.style = "opacity:0;right:100%;bottom:100%"
         this.$refs.tumblrIcon.style = "opacity:0"
         this.$refs.plusIcon.style = "opacity:0;right:0"
         this.$refs.plusIconBig.style = "opacity:0;right:100%;bottom:0"
