@@ -94,24 +94,53 @@ console.log(document.getElementsByClassName('searchInput'))
         setTimeout(() => {
           this.$refs.tumblrIcon.style = "opacity:1;transition:linear 0.3s;font-size:10rem"
           this.$refs.plusIcon.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:46%"
-          this.$refs.plusIconBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:54%;bottom:50%"
+          this.$refs.plusIconBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:54%;bottom:48%"
           this.$refs.heartSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:52%;bottom:41%"
-          this.$refs.plusIconTwo.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:42%;bottom:90%"
+          this.$refs.plusIconTwo.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:43%;bottom:90%"
           this.$refs.heartBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:48%;bottom:78%"
-          this.$refs.heartSmaller.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:65%;bottom:45%"
-          this.$refs.earPhoneBiggest.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:53%;bottom:70%"
-
+          this.$refs.heartSmaller.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:65%;bottom:47%"
+          this.$refs.headPhoneBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:53%;bottom:72%"
+          this.$refs.chatBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:41%;bottom:59%;"
+          this.$refs.chatBigger.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:46%;bottom:88%;"
+          this.$refs.chatBiggest.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:57%;bottom:38%;"
+          this.$refs.photoSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:38%;bottom:43%;"
+          this.$refs.photoBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:61%;bottom:68%;"
+          this.$refs.linkSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:55%;bottom:57%;"
+          this.$refs.linkBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:38%;bottom:79.5%;"
+          this.$refs.quoteOne.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:33.5%;bottom:59.5%;"
+          this.$refs.quoteTwo.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:63%;bottom:55%;"
+          this.$refs.videoBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:34.5%;bottom:72%;"
+          this.$refs.videoBigg.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:59%;bottom:86%;"
+          this.$refs.retweetSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:45.5%;bottom:36%;"
+          this.$refs.retweetBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:52.2%;bottom:89%;"
+         this.$refs.headPhoneSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:32%;bottom:48%;"
+          this.$refs.textBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:41%;bottom:68.5%;"
         }, 500)
       }
       else {
-          this.$refs.earPhoneBiggest.style = "opacity:0;right:100%;bottom:100%"
+          this.$refs.headPhoneBig.style = "opacity:0;right:100%;bottom:100%"
         this.$refs.tumblrIcon.style = "opacity:0"
         this.$refs.plusIcon.style = "opacity:0;right:0"
         this.$refs.plusIconBig.style = "opacity:0;right:100%;bottom:0"
-        this.$refs.heartSmall.style = "opacity:0;right:100%;bottom:0"
+        this.$refs.heartSmall.style = "opacity:0;right:130%;"
         this.$refs.plusIconTwo.style = "opacity:0;right:0"
         this.$refs.heartBig.style = "opacity:0;right:50%;bottom:100%"
-        this.$refs.heartSmaller.style = "opacity:0;right:100%"
+        this.$refs.heartSmaller.style = "opacity:0;right:100%;bottom:37%"  
+ this.$refs.chatBig.style = "opacity:0;right:0;"
+   this.$refs.chatBigger.style = "opacity:0;bottom:120%"
+   this.$refs.chatBiggest.style = "opacity:0;right:120%;bottom:0;"
+ this.$refs.photoSmall.style = "opacity:0;right:30%;bottom:0;"
+ this.$refs.photoBig.style = "opacity:0;right:120%;bottom:70%;"
+ this.$refs.linkSmall.style = "opacity:0;right:120%;"
+ this.$refs.linkBig.style = "opacity:0;right:20%;bottom:100%;"
+ this.$refs.quoteOne.style = "opacity:0;right:0%;"
+ this.$refs.quoteTwo.style = "opacity:0;right:120%;"
+ this.$refs.videoBig.style = "opacity:0;right:0%;bottom:100%"
+ this.$refs.videoBigg.style = "opacity:0;right:120%;bottom:100%"
+ this.$refs.retweetSmall.style = "opacity:0;right:35%;bottom:0"
+ this.$refs.retweetBig.style = "opacity:0;right:60%;bottom:100%"
+ this.$refs.headPhoneSmall.style = "opacity:0;right:10%;bottom:0"
+ this.$refs.textBig.style = "opacity:0;right:0%;bottom:80%"
       }
     },
 
@@ -201,7 +230,16 @@ setInterval(() => { let num = Math.floor(Math.random() * blogs.length);
   this.postedBy[0].artistAvatar =blogs[num].avatar
 this.postedBy[0].artistName =blogs[num].name
 },10000);
-    }
+    },
+
+shuffleBlogs(){
+		let images = this.blogs;
+		for (let i = images.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[ images[i], images[j] ] = [ images[j], images[i] ];
+		}
+	
+}
 
 
 
