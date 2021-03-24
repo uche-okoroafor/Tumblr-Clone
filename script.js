@@ -9,17 +9,45 @@ const Container = Vue.createApp({
         { isActive: false, id: '#footer', linkId: '5' }],
 
       blogs: [
-        { name: "uche", url: "assets/walkinman.webp", avatar: "assets/artb.jpg", notes: 2500 },
-        { name: "uche", url: "assets/avatar.jpg", avatar: "assets/artb.jpg", notes: 2500 },
-        { name: "uche", url: "assets/artbylgg.jpg", avatar: "assets/artbylgg.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artbylittl.jpg", avatar: "assets/artbylittl.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
-        { name: "uche", url: "assets/artb.jpg", avatar: "assets/artb.jpg", notes: '2500' },
+        { name: "kenta-nikki", url: "assets/background-image/kenta-nikki.jpg", avatar: "assets/avatar/kenta-nikki.jpg", notes: 2500 },
+        { name: "bethfuller", url: "assets/background-image/bethfuller.png", avatar: "assets/avatar/bethfuller.jpg", notes: 2500 },
+        { name: "artbylittlebug", url: "assets/background-image/artbylittlebug.jpg", avatar: "assets/avatar/artbylittlebug.jpg", notes: 2500 },
+        { name: "instantreigen", url: "assets/background-image/instantreigen.jpg", avatar: "assets/avatar/instantreigen.jpg", notes: 2500 },
+        { name: "Kpop", url: "assets/background-image/Kpop.jpg", avatar: "assets/avatar/Kpop.jpg", notes: 2500 },
+        { name: "mathildejr", url: "assets/background-image/mathildejr.jpg", avatar: "assets/avatar/mathildejr.jpg", notes: 2500 },
+        { name: "nooskadraws", url: "assets/background-image/nooskadraws.jpg", avatar: "assets/avatar/nooskadraws.jpg", notes: 2500 },
+        { name: "onurilter", url: "assets/background-image/onurilter.jpg", avatar: "assets/avatar/onurilter.png", notes: 2500 },
+        { name: "tvoom", url: "assets/background-image/tvoom.jpg", avatar: "assets/avatar/tvoom.jpg", notes: 2500 },
+        { name: "terahsvent", url: "assets/background-image/terahsvent.jpg", avatar: "assets/avatar/terahsvent.jpg", notes: 2500 },
+        { name: "michellekingdom", url: "assets/background-image/michellekingdom.jpg", avatar: "assets/avatar/michellekingdom.jpg", notes: 2500 },
+        { name: "artofmaquenda", url: "assets/background-image/artofmaquenda.gif", avatar: "assets/avatar/artofmaquenda.jpg", notes: 2500 },
+        { name: "outerspacebih", url: "assets/background-image/outerspacebih.jpg", avatar: "assets/avatar/outerspacebih.jpg", notes: 2500 },
+
       ],
+blogsArts:[
+        { name: "sleepyseaslug",artUrl: "assets/Arts/sleepyseaslug.webp", avatar: "assets/avatar/sleepyseaslug.jpg", notes: 2500 },
+        { name: "blatpolana",artUrl: "assets/Arts/blatpolana.jpg", avatar: "assets/avatar/blatpolana.jpg", notes: 2500 },
+        { name: "daniellechenettedraws",artUrl: "assets/Arts/daniellechenettedraws.webp", avatar: "assets/avatar/daniellechenettedraws.jpg", notes: 2500 },
+        { name: "bcbae",artUrl: "assets/Arts/bcbae.jpg", avatar: "assets/avatar/bcbae.jpg", notes: 2500 },
+        { name: "michellekingdom",artUrl: "assets/Arts/michellekingdom.jpg", avatar: "assets/avatar/michellekingdom.jpg", notes: 2500 },
+        { name: "nooskadraws",artUrl: "assets/Arts/nooskadraws.jpg", avatar: "assets/avatar/nooskadraws.jpg", notes: 2500 },
+        { name: "onurilter",artUrl: "assets/Arts/onurilter.jpg", avatar: "assets/avatar/onurilter.png", notes: 2500 },
+        { name: "artbylittlebug",artUrl: "assets/Arts/artbylittle.jpg", avatar: "assets/avatar/artbylittlebug.jpg", notes: 2500 },
+        { name: "mathildejr",artUrl: "assets/Arts/mathildejr.jpg", avatar: "assets/avatar/mathildejr.jpg", notes: 2500 },
+        { name: "instantreigen",artUrl: "assets/Arts/instantreigen.jpg", avatar: "assets/avatar/instantreigen.jpg", notes: 2500 },
+
+
+
+
+],
+postedBy:[
+{
+artistName:'user',
+artistAvatar:'avatar',
+
+}
+
+],
 
 
     }
@@ -28,8 +56,6 @@ const Container = Vue.createApp({
   mounted() {
     document.getElementById('container').addEventListener('scroll', () => this.onScroll(this.$refs));
   this.handleBackgroundImage(this.blogs)
-
-
   },
   beforeUnmount() {
     document.getElementById('container').removeEventListener('scroll', () => this.onScroll(this.$refs));
@@ -73,27 +99,63 @@ const Container = Vue.createApp({
       this.handleMediaIconPop(this.indicatorList)
     },
 
+handleSearchInput(){
+document.getElementsByClassName('searchInput').style='background-color: rgba(253, 254, 255,1);'
+console.log(document.getElementsByClassName('searchInput'))
+},
 
     iconsShow(indicator) {
       if (indicator[1].isActive.length) {
         setTimeout(() => {
           this.$refs.tumblrIcon.style = "opacity:1;transition:linear 0.3s;font-size:10rem"
           this.$refs.plusIcon.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:46%"
-          this.$refs.plusIconBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:54%;bottom:50%"
+          this.$refs.plusIconBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:54%;bottom:48%"
           this.$refs.heartSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:52%;bottom:41%"
-          this.$refs.plusIconTwo.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:42%;bottom:90%"
+          this.$refs.plusIconTwo.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:43%;bottom:90%"
           this.$refs.heartBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:48%;bottom:78%"
-          this.$refs.heartSmaller.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:65%;bottom:45%"
+          this.$refs.heartSmaller.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:65%;bottom:47%"
+          this.$refs.headPhoneBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:53%;bottom:72%"
+          this.$refs.chatBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:41%;bottom:59%;"
+          this.$refs.chatBigger.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:46%;bottom:88%;"
+          this.$refs.chatBiggest.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:57%;bottom:38%;"
+          this.$refs.photoSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:38%;bottom:43%;"
+          this.$refs.photoBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:61%;bottom:68%;"
+          this.$refs.linkSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:55%;bottom:57%;"
+          this.$refs.linkBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:38%;bottom:79.5%;"
+          this.$refs.quoteOne.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:33.5%;bottom:59.5%;"
+          this.$refs.quoteTwo.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:63%;bottom:55%;"
+          this.$refs.videoBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:34.5%;bottom:72%;"
+          this.$refs.videoBigg.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:59%;bottom:86%;"
+          this.$refs.retweetSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:45.5%;bottom:36%;"
+          this.$refs.retweetBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:52.2%;bottom:89%;"
+         this.$refs.headPhoneSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:32%;bottom:48%;"
+          this.$refs.textBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:41%;bottom:68.5%;"
         }, 500)
       }
       else {
+          this.$refs.headPhoneBig.style = "opacity:0;right:100%;bottom:100%"
         this.$refs.tumblrIcon.style = "opacity:0"
         this.$refs.plusIcon.style = "opacity:0;right:0"
         this.$refs.plusIconBig.style = "opacity:0;right:100%;bottom:0"
-        this.$refs.heartSmall.style = "opacity:0;right:100%;bottom:0"
+        this.$refs.heartSmall.style = "opacity:0;right:130%;"
         this.$refs.plusIconTwo.style = "opacity:0;right:0"
         this.$refs.heartBig.style = "opacity:0;right:50%;bottom:100%"
-        this.$refs.heartSmaller.style = "opacity:0;right:100%"
+        this.$refs.heartSmaller.style = "opacity:0;right:100%;bottom:37%"  
+ this.$refs.chatBig.style = "opacity:0;right:0;"
+   this.$refs.chatBigger.style = "opacity:0;bottom:120%"
+   this.$refs.chatBiggest.style = "opacity:0;right:120%;bottom:0;"
+ this.$refs.photoSmall.style = "opacity:0;right:30%;bottom:0;"
+ this.$refs.photoBig.style = "opacity:0;right:120%;bottom:70%;"
+ this.$refs.linkSmall.style = "opacity:0;right:120%;"
+ this.$refs.linkBig.style = "opacity:0;right:20%;bottom:100%;"
+ this.$refs.quoteOne.style = "opacity:0;right:0%;"
+ this.$refs.quoteTwo.style = "opacity:0;right:120%;"
+ this.$refs.videoBig.style = "opacity:0;right:0%;bottom:100%"
+ this.$refs.videoBigg.style = "opacity:0;right:120%;bottom:100%"
+ this.$refs.retweetSmall.style = "opacity:0;right:35%;bottom:0"
+ this.$refs.retweetBig.style = "opacity:0;right:60%;bottom:100%"
+ this.$refs.headPhoneSmall.style = "opacity:0;right:10%;bottom:0"
+ this.$refs.textBig.style = "opacity:0;right:0%;bottom:80%"
       }
     },
 
@@ -101,7 +163,7 @@ const Container = Vue.createApp({
       this.handleLoadingDots(false);
       this.$refs.loading.style = "display:flex";
       this.$refs.blogs.style = "display:none";
-
+       this.shuffleBlogs()
       setTimeout(() => {
         if (indicator[2].isActive.length) {
           this.handleLoadingDots(true);
@@ -175,13 +237,24 @@ const Container = Vue.createApp({
 let num = Math.floor(Math.random() * blogs.length);
       this.$refs.login.style ='background-image:url(' + blogs[num].url + ')';
       this.$refs.footer.style ='background-image:url(' + blogs[num].url + ')';
-
+this.postedBy[0].artistAvatar =blogs[num].avatar
+this.postedBy[0].artistName =blogs[num].name
 setInterval(() => { let num = Math.floor(Math.random() * blogs.length);
       this.$refs.login.style ='background-image:url(' + blogs[num].url + ')';
       this.$refs.footer.style ='background-image:url(' + blogs[num].url + ')';
-  
+  this.postedBy[0].artistAvatar =blogs[num].avatar
+this.postedBy[0].artistName =blogs[num].name
 },10000);
-    }
+    },
+
+shuffleBlogs(){
+		let blogs = this.blogsArts;
+		for (let i = blogs.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[ blogs[i], blogs[j] ] = [ blogs[j], blogs[i] ];
+		}
+this.blogsArts = blogs
+}
 
 
 

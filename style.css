@@ -71,9 +71,17 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 }
-.tumblr-input i{
-margin-left: 10px
+.tumblr-input svg{
+margin-left: 10px;
+color:var(--white);
 }
+
+
+.tumblr-input i{
+margin-left: 10px;
+color:var(--white);
+}
+
 .tumblr-input input{
 width:30rem;
 border: none;
@@ -269,10 +277,15 @@ font-weight: bold;
 
 
 .terms-links{
-margin-top: 8rem;
-display: flex;
-flex-flow: row;
-justify-content: flex-start;
+margin-top: 7.3rem;
+text-align:left;
+width: 100%;
+}
+
+.terms-links div{
+display: inline-block;
+width: 83%;
+padding-right: 7px;
 }
 
 .terms-links a{
@@ -281,12 +294,21 @@ color:var(--white) ;
 margin-left: 0.5rem;
 
 }
+
+
 .terms-links :nth-child(5){
-display: inline-block;
 text-align:right;
-margin-left: 65%;
 }
 
+.terms-links img,.footer-icon img{
+width:24px;
+height:24px;
+border-radius: 5px;
+}
+.footer-icon{text-align: right;
+margin-top: 4.5rem;
+margin-right: 10px;
+}
 
 
 #About{
@@ -307,12 +329,13 @@ color: var(--green);
 opacity: 0;
 }
 
-.icons i[class*='fas']{
+.icons i[class*='fas'],.icons svg{
 color: var(--green);
 -webkit-text-stroke: 5px var(--green-line);
 position: absolute;
 opacity: 0;
 }
+
 
 .icons .fa-plus{
 font-size: 2.5rem;
@@ -347,11 +370,110 @@ right: 50%;
 bottom:100%;
 }
 .icons .fa-heart-smaller{
-
 font-size: 2rem;
 right: 65%;
-bottom: 45%;
+bottom: 60%;
 }
+
+
+
+.icons .text-big{
+right:41%;
+bottom:68.5%;
+
+}
+
+
+
+.icons .video-big{
+right:34.5%;
+bottom:72%;
+}
+
+.icons .video-bigg{
+right:59%;
+bottom:86%;
+}
+
+.icons .photo-small{
+right:38%;
+bottom:43%;
+}
+
+.icons .photo-big{
+right:61%;
+bottom:68%;
+}
+
+.icons .headphone-small{
+right:32%;
+bottom:48%;
+}
+
+.icons .headPhone{
+right:100%;
+bottom:100%;
+}
+
+
+.icons .link-small{
+right: 55%;
+bottom: 57%;
+font-size:5rem;
+
+}
+
+.icons .link-big{
+right: 38%;
+bottom: 79.5%;
+font-size: 6rem;
+}
+
+
+
+.icons .quote-one{
+right: 33.5%;
+bottom: 59.5%;
+transform: rotate(180deg);
+}
+
+
+.icons .quote-two{
+right: 63%;
+bottom: 55%;
+
+}
+
+
+.icons .chat-big{
+right:41%;
+bottom:59%;
+transform: rotate(0.5turn);
+}
+
+.icons .chat-bigger{
+right: 46%;
+bottom: 88%;
+}
+.icons .chat-biggest{
+right: 57%;
+bottom: 38%;
+
+
+}
+.icons .retweet-big{
+right: 52.2%;
+bottom: 89%;
+font-size: 5rem;
+}
+
+.icons .retweet-small{
+right: 45.5%;
+bottom: 36%;
+font-size: 4rem;
+}
+
+
 
 .about-text{
 margin:0 auto;
@@ -399,12 +521,22 @@ background-color: var(--white);
 height: 55px;
 display: flex;
 align-items: center;
-justify-content: space-around;
+justify-content: space-between;
+}
+.blog-contents{
+display: flex;
+align-items: center;
+justify-content:space-around;
+margin-left: 10px;
+}
+.blog-contents span{
+margin-left: 10px;
+
 }
 
-
-
-
+.blog-heading > span{
+margin-right: 10px;
+}
 .blog-heading:nth-child(1){
 color: var(--black);
 
@@ -416,8 +548,8 @@ color: var(--blue);
 
 
 .blog-heading img{
-width: 40px;
-height: 40px;
+width: 35px;
+height: 35px;
 border-radius:5px;
 }
 
