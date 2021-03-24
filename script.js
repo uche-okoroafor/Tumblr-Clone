@@ -9,21 +9,37 @@ const Container = Vue.createApp({
         { isActive: false, id: '#footer', linkId: '5' }],
 
       blogs: [
-        { name: "kenta-nikki", url: "assets/background-image/kenta-nikki.jpg", avatar: "assets/avatar/kenta-nikki.jpg", notes: 2500,artimg:'' },
-        { name: "bethfuller", url: "assets/background-image/bethfuller.png", avatar: "assets/avatar/bethfuller.jpg", notes: 2500,artimg:'' },
-        { name: "artbylittlebug", url: "assets/background-image/artbylittlebug.jpg", avatar: "assets/avatar/artbylittlebug.jpg", notes: 2500,artimg:'' },
-        { name: "instantreigen", url: "assets/background-image/instantreigen.jpg", avatar: "assets/avatar/instantreigen.jpg", notes: 2500,artimg:'' },
-        { name: "Kpop", url: "assets/background-image/Kpop.jpg", avatar: "assets/avatar/Kpop.jpg", notes: 2500,artimg:'' },
-        { name: "mathildejr", url: "assets/background-image/mathildejr.jpg", avatar: "assets/avatar/mathildejr.jpg", notes: 2500,artimg:'' },
-        { name: "nooskadraws", url: "assets/background-image/nooskadraws.jpg", avatar: "assets/avatar/nooskadraws.jpg", notes: 2500,artimg:'' },
-        { name: "onurilter", url: "assets/background-image/onurilter.jpg", avatar: "assets/avatar/onurilter.jpg", notes: 2500,artimg:'' },
-        { name: "tvoom", url: "assets/background-image/tvoom.jpg", avatar: "assets/avatar/tvoom.jpg", notes: 2500,artimg:'' },
-        { name: "terahsvent", url: "assets/background-image/terahsvent.jpg", avatar: "assets/avatar/terahsvent.jpg", notes: 2500,artimg:'' },
-        { name: "michellekingdom", url: "assets/background-image/michellekingdom.jpg", avatar: "assets/avatar/michellekingdom.jpg", notes: 2500,artimg:'' },
-        { name: "artofmaquenda", url: "assets/background-image/artofmaquenda.gif", avatar: "assets/avatar/artofmaquenda.jpg", notes: 2500,artimg:'' },
-        { name: "outerspacebih", url: "assets/background-image/terahsvent.jpg", avatar: "assets/avatar/terahsvent.jpg", notes: 2500,artimg:'' },
+        { name: "kenta-nikki", url: "assets/background-image/kenta-nikki.jpg", avatar: "assets/avatar/kenta-nikki.jpg", notes: 2500 },
+        { name: "bethfuller", url: "assets/background-image/bethfuller.png", avatar: "assets/avatar/bethfuller.jpg", notes: 2500 },
+        { name: "artbylittlebug", url: "assets/background-image/artbylittlebug.jpg", avatar: "assets/avatar/artbylittlebug.jpg", notes: 2500 },
+        { name: "instantreigen", url: "assets/background-image/instantreigen.jpg", avatar: "assets/avatar/instantreigen.jpg", notes: 2500 },
+        { name: "Kpop", url: "assets/background-image/Kpop.jpg", avatar: "assets/avatar/Kpop.jpg", notes: 2500 },
+        { name: "mathildejr", url: "assets/background-image/mathildejr.jpg", avatar: "assets/avatar/mathildejr.jpg", notes: 2500 },
+        { name: "nooskadraws", url: "assets/background-image/nooskadraws.jpg", avatar: "assets/avatar/nooskadraws.jpg", notes: 2500 },
+        { name: "onurilter", url: "assets/background-image/onurilter.jpg", avatar: "assets/avatar/onurilter.png", notes: 2500 },
+        { name: "tvoom", url: "assets/background-image/tvoom.jpg", avatar: "assets/avatar/tvoom.jpg", notes: 2500 },
+        { name: "terahsvent", url: "assets/background-image/terahsvent.jpg", avatar: "assets/avatar/terahsvent.jpg", notes: 2500 },
+        { name: "michellekingdom", url: "assets/background-image/michellekingdom.jpg", avatar: "assets/avatar/michellekingdom.jpg", notes: 2500 },
+        { name: "artofmaquenda", url: "assets/background-image/artofmaquenda.gif", avatar: "assets/avatar/artofmaquenda.jpg", notes: 2500 },
+        { name: "outerspacebih", url: "assets/background-image/outerspacebih.jpg", avatar: "assets/avatar/outerspacebih.jpg", notes: 2500 },
 
       ],
+blogsArts:[
+        { name: "sleepyseaslug",artUrl: "assets/Arts/sleepyseaslug.webp", avatar: "assets/avatar/sleepyseaslug.jpg", notes: 2500 },
+        { name: "blatpolana",artUrl: "assets/Arts/blatpolana.jpg", avatar: "assets/avatar/blatpolana.jpg", notes: 2500 },
+        { name: "daniellechenettedraws",artUrl: "assets/Arts/daniellechenettedraws.webp", avatar: "assets/avatar/daniellechenettedraws.jpg", notes: 2500 },
+        { name: "bcbae",artUrl: "assets/Arts/bcbae.jpg", avatar: "assets/avatar/bcbae.jpg", notes: 2500 },
+        { name: "michellekingdom",artUrl: "assets/Arts/michellekingdom.jpg", avatar: "assets/avatar/michellekingdom.jpg", notes: 2500 },
+        { name: "nooskadraws",artUrl: "assets/Arts/nooskadraws.jpg", avatar: "assets/avatar/nooskadraws.jpg", notes: 2500 },
+        { name: "onurilter",artUrl: "assets/Arts/onurilter.jpg", avatar: "assets/avatar/onurilter.png", notes: 2500 },
+        { name: "artbylittlebug",artUrl: "assets/Arts/artbylittle.jpg", avatar: "assets/avatar/artbylittlebug.jpg", notes: 2500 },
+        { name: "mathildejr",artUrl: "assets/Arts/mathildejr.jpg", avatar: "assets/avatar/mathildejr.jpg", notes: 2500 },
+        { name: "instantreigen",artUrl: "assets/Arts/instantreigen.jpg", avatar: "assets/avatar/instantreigen.jpg", notes: 2500 },
+
+
+
+
+],
 postedBy:[
 {
 artistName:'user',
@@ -31,7 +47,8 @@ artistAvatar:'avatar',
 
 }
 
-]
+],
+
 
     }
   },
@@ -39,8 +56,6 @@ artistAvatar:'avatar',
   mounted() {
     document.getElementById('container').addEventListener('scroll', () => this.onScroll(this.$refs));
   this.handleBackgroundImage(this.blogs)
-
-
   },
   beforeUnmount() {
     document.getElementById('container').removeEventListener('scroll', () => this.onScroll(this.$refs));
@@ -148,7 +163,7 @@ console.log(document.getElementsByClassName('searchInput'))
       this.handleLoadingDots(false);
       this.$refs.loading.style = "display:flex";
       this.$refs.blogs.style = "display:none";
-
+       this.shuffleBlogs()
       setTimeout(() => {
         if (indicator[2].isActive.length) {
           this.handleLoadingDots(true);
@@ -233,12 +248,12 @@ this.postedBy[0].artistName =blogs[num].name
     },
 
 shuffleBlogs(){
-		let images = this.blogs;
-		for (let i = images.length - 1; i > 0; i--) {
+		let blogs = this.blogsArts;
+		for (let i = blogs.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
-			[ images[i], images[j] ] = [ images[j], images[i] ];
+			[ blogs[i], blogs[j] ] = [ blogs[j], blogs[i] ];
 		}
-	
+this.blogsArts = blogs
 }
 
 
