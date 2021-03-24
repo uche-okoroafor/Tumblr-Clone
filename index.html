@@ -191,7 +191,7 @@
             </div>
 
             <div class="Blog" ref="Blog">
-                <div v-for="blog in blogs" class="blogs" ref="blogs">
+                <div v-for="blog in blogsArts" class="blogs" ref="blogs">
                     <div class='blog-heading'>
 <div class="blog-contents">
  <img :src="blog.avatar" alt="avatar">
@@ -204,7 +204,7 @@
 </span>
                         
                     </div>
-                    <div class='blog-body'><img :src="blog.url" alt="img-blogs"></div>
+                    <div class='blog-body'><img :src="blog.artUrl" alt="img-blogs"></div>
                     <div class='blog-footer'><span>{{blog.notes}} Notes</span></div>
                 </div>
 
@@ -442,6 +442,11 @@
 
 
                 </div>
+ <div class="footer-icon">
+                <div><a href="#!"> Posted by {{postedBy[0].artistName}}
+                        <img :src='postedBy[0].artistAvatar' alt="avatar"></a></div>
+
+            </div>
             </div>
 
         </section>
