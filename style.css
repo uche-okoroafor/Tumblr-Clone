@@ -1,3 +1,37 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+
+}
+ol, ul {
+    list-style: none;
+}
+
+
 
 :root{
   --dark: #212529;
@@ -30,9 +64,8 @@
     width: device-width;
 }
 html, body {
-  height: 100vh;
-  overflow:auto;
-
+  overflow-x:hidden;
+/* width: 1380px; */
 }
 body {
     font-family:var(--font-family);
@@ -43,6 +76,25 @@ body {
     color: #525f7f;
     background-color: #f8f9fe;
 color:var(--white);
+}
+
+section{
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+width: 100%;
+overflow-x: hidden;
+overflow-y: hidden;
+}
+
+.cil{
+border-radius: 50%;
+border: 5px solid black;
+ position: absolute;
+width: 33rem;
+height:28rem;
+right: 31.5%;
+margin-top: 10px;
 }
 
 
@@ -248,12 +300,11 @@ margin-left: 1.2rem;
 }
 
 
-section{
-  height: 100vh;
-  scroll-snap-align: start;
-  position: relative;
 
-}
+
+
+
+
 
 .about-tumblr{
 display: flex;
@@ -306,7 +357,7 @@ height:24px;
 border-radius: 5px;
 }
 .footer-icon{text-align: right;
-margin-top: 4.5rem;
+margin-top: 1rem;
 margin-right: 10px;
 }
 
@@ -378,36 +429,30 @@ bottom: 60%;
 
 
 .icons .text-big{
-right:41%;
-bottom:68.5%;
+right:0%;bottom:80%;
 
 }
 
 
 
 .icons .video-big{
-right:34.5%;
-bottom:72%;
+right:0%;bottom:100%
 }
 
 .icons .video-bigg{
-right:59%;
-bottom:86%;
+right:120%;bottom:100%
 }
 
 .icons .photo-small{
-right:38%;
-bottom:43%;
+right:30%;bottom:0;
 }
 
 .icons .photo-big{
-right:61%;
-bottom:68%;
+right:120%;bottom:70%;
 }
 
 .icons .headphone-small{
-right:32%;
-bottom:48%;
+right:10%;bottom:0;
 }
 
 .icons .headPhone{
@@ -417,59 +462,50 @@ bottom:100%;
 
 
 .icons .link-small{
-right: 55%;
-bottom: 57%;
+right:120%;
 font-size:5rem;
 
 }
 
 .icons .link-big{
-right: 38%;
-bottom: 79.5%;
+right:20%;bottom:100%;
 font-size: 6rem;
 }
 
 
 
 .icons .quote-one{
-right: 33.5%;
-bottom: 59.5%;
+right:0%;
 transform: rotate(180deg);
 }
 
 
 .icons .quote-two{
-right: 63%;
-bottom: 55%;
+right:120%;
 
 }
 
 
 .icons .chat-big{
-right:41%;
-bottom:59%;
+bottom:120%;
 transform: rotate(0.5turn);
 }
 
 .icons .chat-bigger{
-right: 46%;
-bottom: 88%;
+bottom:120%
 }
 .icons .chat-biggest{
-right: 57%;
-bottom: 38%;
+right:120%;bottom:0;
 
 
 }
 .icons .retweet-big{
-right: 52.2%;
-bottom: 89%;
+right:60%;bottom:100%;
 font-size: 5rem;
 }
 
 .icons .retweet-small{
-right: 45.5%;
-bottom: 36%;
+right:35%;bottom:0;
 font-size: 4rem;
 }
 
@@ -492,6 +528,8 @@ margin-bottom: 5px;
 
 #Blogs{
 background-color: var(--purple);
+scroll-snap-align: start;
+position: relative;
 
 }
 .blogs-text{
