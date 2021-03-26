@@ -118,18 +118,18 @@ console.log(document.getElementsByClassName('searchInput'))
           this.$refs.chatBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:41%;bottom:59%;"
           this.$refs.chatBigger.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:46%;bottom:88%;"
           this.$refs.chatBiggest.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:57%;bottom:38%;"
-          this.$refs.photoSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:38%;bottom:43%;"
+          this.$refs.photoSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:39.1%;bottom:43%;"
           this.$refs.photoBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:61%;bottom:68%;"
           this.$refs.linkSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:55%;bottom:57%;"
-          this.$refs.linkBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:38%;bottom:79.5%;"
-          this.$refs.quoteOne.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:33.5%;bottom:59.5%;"
+          this.$refs.linkBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:38%;bottom:78%;"
+          this.$refs.quoteOne.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:32%;bottom:59.5%;"
           this.$refs.quoteTwo.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:63%;bottom:55%;"
-          this.$refs.videoBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:34.5%;bottom:72%;"
+          this.$refs.videoBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:33.5%;bottom:72%;"
           this.$refs.videoBigg.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:59%;bottom:86%;"
-          this.$refs.retweetSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:45.5%;bottom:36%;"
+          this.$refs.retweetSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:45.5%;bottom:35.5%;"
           this.$refs.retweetBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:52.2%;bottom:89%;"
-         this.$refs.headPhoneSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:32%;bottom:48%;"
-          this.$refs.textBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:41%;bottom:68.5%;"
+         this.$refs.headPhoneSmall.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:33%;bottom:48%;"
+          this.$refs.textBig.style = "opacity:1;transition:cubic-bezier(.165,.84,.44,1) 1.5s;right:41%;bottom:66.8%;"
         }, 500)
       }
       else {
@@ -138,12 +138,12 @@ console.log(document.getElementsByClassName('searchInput'))
         this.$refs.plusIcon.style = "opacity:0;right:0"
         this.$refs.plusIconBig.style = "opacity:0;right:100%;bottom:0"
         this.$refs.heartSmall.style = "opacity:0;right:130%;"
-        this.$refs.plusIconTwo.style = "opacity:0;right:0"
+        this.$refs.plusIconTwo.style = "opacity:0;right:0;bottom:90%;"
         this.$refs.heartBig.style = "opacity:0;right:50%;bottom:100%"
         this.$refs.heartSmaller.style = "opacity:0;right:100%;bottom:37%"  
- this.$refs.chatBig.style = "opacity:0;right:0;"
+ this.$refs.chatBig.style ="opacity:0;right:0;bottom:59%"
    this.$refs.chatBigger.style = "opacity:0;bottom:120%"
-   this.$refs.chatBiggest.style = "opacity:0;right:120%;bottom:0;"
+   this.$refs.chatBiggest.style ="opacity:0;right:120%;bottom:0;"
  this.$refs.photoSmall.style = "opacity:0;right:30%;bottom:0;"
  this.$refs.photoBig.style = "opacity:0;right:120%;bottom:70%;"
  this.$refs.linkSmall.style = "opacity:0;right:120%;"
@@ -153,9 +153,9 @@ console.log(document.getElementsByClassName('searchInput'))
  this.$refs.videoBig.style = "opacity:0;right:0%;bottom:100%"
  this.$refs.videoBigg.style = "opacity:0;right:120%;bottom:100%"
  this.$refs.retweetSmall.style = "opacity:0;right:35%;bottom:0"
- this.$refs.retweetBig.style = "opacity:0;right:60%;bottom:100%"
- this.$refs.headPhoneSmall.style = "opacity:0;right:10%;bottom:0"
- this.$refs.textBig.style = "opacity:0;right:0%;bottom:80%"
+ this.$refs.retweetBig.style = "opacity:0;right:60%;bottom:100%;"
+ this.$refs.headPhoneSmall.style = "opacity:0;right:10%;bottom:0;"
+ this.$refs.textBig.style = "opacity:0;right:0%;bottom:80%;"
       }
     },
 
@@ -163,6 +163,7 @@ console.log(document.getElementsByClassName('searchInput'))
       this.handleLoadingDots(false);
       this.$refs.loading.style = "display:flex";
       this.$refs.blogs.style = "display:none";
+ this.$refs.Blog.style = "display:flex";
        this.shuffleBlogs()
       setTimeout(() => {
         if (indicator[2].isActive.length) {
@@ -171,7 +172,14 @@ console.log(document.getElementsByClassName('searchInput'))
           this.$refs.blogs.style = "display:block";
           this.$refs.Blog.style = "margin-top:0rem;transition:cubic-bezier(.165,.84,.44,1) 1s";
         }
-        else { this.$refs.Blog.style = "margin-top:25rem"; }
+        else { this.$refs.Blog.style = "margin-top:20rem";
+setTimeout(() => {
+   this.$refs.Blog.style = "display:none";
+}, 100);
+
+
+ }
+
 
       }, 2000);
 
